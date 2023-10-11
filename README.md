@@ -1,18 +1,19 @@
-# JaCaMo Template
+# JaCaMo by exercises — Exercise 05a — Implementing coordination artifacts
 
-A template repository for creating new JaCaMo-based applications.
+In this exercise, you need to exploit structured operations to implement a coordination artifact,
+a semaphore, or a lock following another nomenclature,
+and its usage to solve the dining philosophers coordination problem.
+In the dining philosophers problem we have five "philosopher"
+agents gathered around a round table and, being philosophers, they like to think and to eat.
+The question is that to eat they need two forks,
+shared respectively with the philosopher to their right and to their left.
+The solution is to impose a total ordering on them, on their locks,
+and let all philosophers take them in the same order.
+Everything about the philosopher's behavior is implemented;
+the missing elements are the lock action invocations,
+which should be made using the artifact name and knowing that the artifacts are in the "w0" workspace.
+The "lock" artifact needs to be implemented from scratch leveraging the mechanism typical of structured operations.
 
-## What?
+## Solution
 
-Exactly what the title says,
-this is a template repository to create hassle-free JaCaMo applications without starting from scratch.
-You can adjust the "config.jcm" file as you wish to add or remove all the configuration that you need,
-but please **don't** touch the "asl-path", "java-path" and "org-path" properties.
-
-## How to run it?
-
-You can use Gradle to run it,
-either using the Gradle wrapper in the repository or using the Gradle tool installed on your system.
-You don't even need to specify the task name; the default one will launch your application.
-But if you really need to know it, for example, for running it after pressing the "play" button on your preferred IDE,
-add the **run** task to your configurations and see the magic happen!
+All solution files are marked with the "solution" suffix, don't open them before solving the exercise!
