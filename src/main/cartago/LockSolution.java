@@ -1,19 +1,27 @@
 import cartago.Artifact;
+import cartago.GUARD;
 import cartago.OPERATION;
 
 public class LockSolution extends Artifact {
+    boolean conditionVariable;
 
     void init() {
-        /* Initialize here your guard condition, you'll need to declare also some field. */
+        this.conditionVariable = true;
     }
 
     @OPERATION
     void acquire() {
-        /* Add your code here for waiting until the guard condition is met and then setting it. */
+        await("awaitConditionVariable");
+        this.conditionVariable = false;
+    }
+
+    @GUARD
+    boolean awaitConditionVariable() {
+        return this.conditionVariable;
     }
 
     @OPERATION
     void release() {
-        /* Add your code here for resetting the guard condition. */
+        this.conditionVariable = true;
     }
 }
