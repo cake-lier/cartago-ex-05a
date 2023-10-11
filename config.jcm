@@ -1,5 +1,63 @@
 mas hello_world {
-    agent hello_world_agent
+    agent philosopher_agent_0: philosopher_agent.asl {
+        beliefs: index(0), total(5)
+        join: w0
+    }
+    agent philosopher_agent_1: philosopher_agent.asl {
+        beliefs: index(1), total(5)
+        join: w0
+    }
+    agent philosopher_agent_2: philosopher_agent.asl {
+        beliefs: index(2), total(5)
+        join: w0
+    }
+    agent philosopher_agent_3: philosopher_agent.asl {
+        beliefs: index(3), total(5)
+        join: w0
+    }
+    agent philosopher_agent_4: philosopher_agent.asl {
+        beliefs: index(4), total(5)
+        join: w0
+    }
+
+    workspace w0 {
+        artifact fork_0: Lock()
+        artifact fork_1: Lock()
+        artifact fork_2: Lock()
+        artifact fork_3: Lock()
+        artifact fork_4: Lock()
+    }
+
+    /*
+        agent philosopher_agent_0: philosopher_agent_solution.asl {
+            beliefs: index(0), total(5)
+            join: w0
+        }
+        agent philosopher_agent_1: philosopher_agent_solution.asl {
+            beliefs: index(1), total(5)
+            join: w0
+        }
+        agent philosopher_agent_2: philosopher_agent_solution.asl {
+            beliefs: index(2), total(5)
+            join: w0
+        }
+        agent philosopher_agent_3: philosopher_agent_solution.asl {
+            beliefs: index(3), total(5)
+            join: w0
+        }
+        agent philosopher_agent_4: philosopher_agent_solution.asl {
+            beliefs: index(4), total(5)
+            join: w0
+        }
+
+        workspace w0 {
+            artifact fork_0: LockSolution()
+            artifact fork_1: LockSolution()
+            artifact fork_2: LockSolution()
+            artifact fork_3: LockSolution()
+            artifact fork_4: LockSolution()
+        }
+    */
 
     asl-path: "src/main/jason"
     java-path: "src/main/cartago"
