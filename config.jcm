@@ -1,4 +1,4 @@
-mas hello_world {
+mas exercise_05a {
     agent philosopher_agent_0: philosopher_agent.asl {
         beliefs: index(0), total(5)
         join: w0
@@ -21,11 +21,11 @@ mas hello_world {
     }
 
     workspace w0 {
-        artifact fork_0: Lock()
-        artifact fork_1: Lock()
-        artifact fork_2: Lock()
-        artifact fork_3: Lock()
-        artifact fork_4: Lock()
+        artifact fork_0: io.github.cakelier.Lock()
+        artifact fork_1: io.github.cakelier.Lock()
+        artifact fork_2: io.github.cakelier.Lock()
+        artifact fork_3: io.github.cakelier.Lock()
+        artifact fork_4: io.github.cakelier.Lock()
     }
 
     /*
@@ -51,11 +51,11 @@ mas hello_world {
         }
 
         workspace w0 {
-            artifact fork_0: LockSolution()
-            artifact fork_1: LockSolution()
-            artifact fork_2: LockSolution()
-            artifact fork_3: LockSolution()
-            artifact fork_4: LockSolution()
+            artifact fork_0: io.github.cakelier.LockSolution()
+            artifact fork_1: io.github.cakelier.LockSolution()
+            artifact fork_2: io.github.cakelier.LockSolution()
+            artifact fork_3: io.github.cakelier.LockSolution()
+            artifact fork_4: io.github.cakelier.LockSolution()
         }
     */
 

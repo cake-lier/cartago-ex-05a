@@ -1,3 +1,5 @@
+package io.github.cakelier;
+
 import cartago.Artifact;
 import cartago.GUARD;
 import cartago.OPERATION;
@@ -5,23 +7,23 @@ import cartago.OPERATION;
 public class LockSolution extends Artifact {
     boolean conditionVariable;
 
-    void init() {
+    private void init() {
         this.conditionVariable = true;
     }
 
     @OPERATION
-    void acquire() {
+    public void acquire() {
         await("awaitConditionVariable");
         this.conditionVariable = false;
     }
 
     @GUARD
-    boolean awaitConditionVariable() {
+    private boolean awaitConditionVariable() {
         return this.conditionVariable;
     }
 
     @OPERATION
-    void release() {
+    public void release() {
         this.conditionVariable = true;
     }
 }
