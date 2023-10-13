@@ -5,7 +5,7 @@ import cartago.GUARD;
 import cartago.OPERATION;
 
 public class LockSolution extends Artifact {
-    boolean conditionVariable;
+    private boolean conditionVariable;
 
     private void init() {
         this.conditionVariable = true;
