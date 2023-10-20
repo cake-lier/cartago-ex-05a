@@ -1,4 +1,4 @@
-# JaCaMo by exercises — Exercise 05a — Implementing coordination artifacts
+# CArtAgO by exercises — Exercise 05a — Implementing coordination artifacts
 
 In this exercise, you need to exploit structured operations to implement a coordination artifact,
 a semaphore, or a lock following another nomenclature,
